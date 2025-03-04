@@ -40,7 +40,6 @@ const NavBar = () => {
             <Link to={'/'}>
                 <img className='w-30 object-contain' src={Logo} alt="logo" />
             </Link>
-          
         </div>
 
         <div className={`max-sm:fixed max-xl:fixed max-xl:w-[60%] max-xl:!p-[50px] transition-all duration-300 ${showSide ? 'translate-x-0 max-xl:translate-x-0' : 'max-sm:-translate-x-100 max-xl:-translate-x-full'} max-sm:!p-5 z-10 max-sm:w-[60%] bg-[#103e91] max-sm:h-screen max-xl:h-screen h-full max-sm:left-0 max-xl:left-0 max-xl:top-0 max-sm:top-0 relative`}>

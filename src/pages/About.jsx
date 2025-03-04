@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import TeamImage from '../assets/images/team.avif'
 import Button from '../components/Button';
 import { services } from '../constant/Data';
+import Team from '../assets/images/team.svg'
 
 const About = () => {
   return (
@@ -73,51 +74,33 @@ const About = () => {
       </div>
 
       <div className="max-w-7xl !mx-auto !py-16 !px-4 sm:!px-6 lg:!px-8" data-aos="fade-up">
-        <div className="text-center" data-aos="fade-up">
-          <h2 className="text-3xl !!font-extrabold text-gray-900">Our Team</h2>
-          <p className="!mt-4 max-w-2xl text-lg text-gray-600 !mx-auto">
-            Our team consists of professionals with advanced degrees across various disciplines, each bringing specialized knowledge and experience.
-          </p>
-        </div>
-        
-        <div className="!mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden" data-aos="fade-up">
-              <img 
-                src="/api/placeholder/160/160" 
-                alt="Team member" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="!mt-4 text-xl !font-medium text-gray-900" data-aos="fade-up">Dr. Sarah Johnson</h3>
-            <p className="text-blue-700" data-aos="fade-up">Academic Director</p>
-            <p className="!mt-2 text-gray-600 text-center" data-aos="fade-up">Ph.D. in Literature with over 15 years of experience in academic writing and research.</p>
+        <div className="flex max-lg:flex-col max-lg:gap-[20px] gap-2 items-center justify-between !p-8">
+          <div className="w-full  md:w-1/2 p-4">
+              <h2 className="text-3xl !font-extrabold text-[#103e91] !mb-4" data-aos="fade-up">Our Team</h2>
+              <p className="text-lg text-gray-600 !mb-4" data-aos="fade-up">
+                Our team offers professional academic support services to help you excel in your studies. 
+                We provide expert assistance with:
+              </p>
+              <ul className="list-disc !pl-5 text-gray-600 !mb-4" data-aos="fade-up">
+                <li data-aos="fade-up">Thesis Writing</li>
+                <li data-aos="fade-up">Project Work Assistance</li>
+                <li data-aos="fade-up">Proofreading and Editing</li>
+                <li data-aos="fade-up">Plagiarism Checks</li>
+              </ul>
+              <p data-aos="fade-up" className="text-lg text-gray-600">
+                We ensure high-quality work and help you meet deadlines with personalized, reliable support.
+              </p>
+            <Link data-aos="fade-up" to={'/contact'} className="inline-block !py-2 !mt-4 text-white">
+              <Button text={"Get Started"} />
+            </Link>
           </div>
-          
-          <div className="flex flex-col items-center" data-aos="fade-up">
-            <div className="w-40 h-40 rounded-full overflow-hidden" data-aos="fade-up">
-              <img 
-                src="/api/placeholder/160/160" 
-                alt="Team member" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="!mt-4 text-xl !font-medium text-gray-900" data-aos="fade-up">Prof. Michael Chen</h3>
-            <p className="text-blue-700" data-aos="fade-up">Research Lead</p>
-            <p className="!mt-2 text-gray-600 text-center" data-aos="fade-up">Specialized in quantitative research methodologies and statistical analysis.</p>
-          </div>
-          
-          <div className="flex flex-col items-center" data-aos="fade-up">
-            <div className="w-40 h-40 rounded-full overflow-hidden" data-aos="fade-up">
-              <img 
-                src="/api/placeholder/160/160" 
-                alt="Team member" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="!mt-4 text-xl !font-medium text-gray-900" data-aos="fade-up">Elizabeth Osei</h3>
-            <p className="text-blue-700" data-aos="fade-up">Client Success Manager</p>
-            <p className="!mt-2 text-gray-600 text-center" data-aos="fade-up">Dedicated to ensuring client satisfaction and project quality across all services.</p>
+
+          <div className="w-full md:w-1/2 !p-4" data-aos="fade-left">
+            <img
+              src={Team}
+              alt="Our Team"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>
