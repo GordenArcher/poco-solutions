@@ -14,6 +14,11 @@ import Proofreading from '../pages/Proofreading'
 import Assignments from '../pages/Assignments'
 import PrivacyPolicy from '../pages/PrivacyPolicy'
 import TermsCondition from '../pages/TermsCondition'
+import WebDevelopment from '../pages/WebDevelopment'
+import AppDevelopment from '../pages/AppDevelopment'
+import Publication from '../pages/Publication'
+import WebAppDevelopment from '../pages/WebAppDevelopment'
+import Testmonials from '../pages/Testmonials'
 
 const PageRoutes = () => {
   return (
@@ -25,6 +30,7 @@ const PageRoutes = () => {
             <Route path='/about' element={ <About />} />
             <Route path='/contact' element={ <Contact />} />
             <Route path='/login' element={ <Login />} />
+            <Route path='/testimonials' element={ <Testmonials />} />
             <Route path='/privacy-policy' element={ <PrivacyPolicy />} />
             <Route path='/terms-condition' element={ <TermsCondition />} />
             <Route path='/service/thesis' element={ <Thesis />} />
@@ -33,6 +39,10 @@ const PageRoutes = () => {
             <Route path='/service/proofreading' element={ <Proofreading />} />
             <Route path='/service/plagiarism-checks' element={ <Plagiarism />} />
             <Route path='/service/consultation' element={ <Consultation />} />
+            <Route path='/service/website-development' element={ <WebDevelopment />} />
+            <Route path='/service/mobile-app-development' element={ <AppDevelopment />} />
+            <Route path='/service/publications' element={ <Publication />} />
+            <Route path='/service/web-app-development' element={ <WebAppDevelopment />} />
             <Route path='*' element={ <Home />} />
         </Routes>
     </div>

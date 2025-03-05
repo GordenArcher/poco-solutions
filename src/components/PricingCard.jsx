@@ -6,7 +6,7 @@ const PricingCard = ({ plan }) => {
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-950 to-slate-900 !p-[1px] shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/25">
                 <div className="absolute inset-0 bg-gradient-to-b from-cyan-500 to-blue-500 opacity-20"></div>
 
-                <div className="relative rounded-2xl h-[500px] bg-gradient-to-b from-slate-950 to-slate-900 !p-6">
+                <div className="relative rounded-2xl h-[350px] bg-gradient-to-b from-slate-950 to-slate-900 !p-6">
                     <div className="absolute -left-16 -top-16 h-32 w-32 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/0 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70"></div>
                     <div className="absolute -bottom-16 -right-16 h-32 w-32 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/0 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-70"></div>
 
@@ -54,25 +54,6 @@ const PricingCard = ({ plan }) => {
                                 </div>
                             </div>
                         ))}
-                    
-
-                    <div className="relative !mt-8">
-                        <button data-aos="fade-up"  className="group/btn relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 !p-px font-semibold text-white shadow-[0_1000px_0_0_hsl(0_0%_100%_/_0%)_inset] transition-colors hover:shadow-[0_1000px_0_0_hsl(0_0%_100%_/_2%)_inset]">
-                            <div className="relative rounded-xl bg-slate-950/50 !px-4 !py-3 transition-colors group-hover/btn:bg-transparent">
-                                <span className="relative flex items-center justify-center gap-2">
-                                Get Started
-                                <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1">
-                                    <path
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    ></path>
-                                </svg>
-                                </span>
-                            </div>
-                        </button>
-                    </div>
 
                     <div className="!mt-4 flex items-center justify-center gap-2" data-aos="fade-up" >
                         <svg data-aos="fade-up"  stroke="currentColor" viewBox="0 0 24 24" fill="none" className="h-4 w-4 text-slate-400">

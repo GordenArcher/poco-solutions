@@ -1,12 +1,13 @@
 import Hero from '../layout/Hero'
 import Login from './Auth/Login'
-import { Choose, testimonials, whatDo } from '../constant/Data'
+import { Choose, littleTestimonials, whatDo } from '../constant/Data'
 import AboutImg from '../assets/images/illustration-1.webp'
 import Jos from '../assets/images/avatar-7.png'
 import { Link } from 'react-router-dom'
 import Slider from '../layout/Slider'
 import FaQ from '../components/FaQ'
 import TestimonialCard from '../components/TestimonialCard'
+import Button from '../components/Button'
 
 const Home = () => {
 
@@ -64,7 +65,7 @@ const Home = () => {
                                     <div className='w-full grid max-sm:grid-cols-1 grid-cols-2'>
                                         {whatDo.map((w) => (
                                             <section key={w.id} className='w-full h-full flex relative' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                                <div className='w-full h-full flex items-center gap-[10px]'>
+                                                <div className='w-full h-[50px] flex items-center gap-[10px]'>
                                                     <span className='text-[#103e91] text-[2rem]'>
                                                         <ion-icon name="checkmark-done-circle"></ion-icon>
                                                     </span>
@@ -82,8 +83,8 @@ const Home = () => {
                                                     <img className='w-[50px] h-full rounded border-1' src={Jos} alt="josua's image" />
                                                 </div>
                                                 <div className='flex flex-col gap-1' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                                                    <h3 className='text-xl'>Josua Nettey</h3>
-                                                    <span className='!font-extrabold text-[#103e91]'>Founder</span>
+                                                    <h3 className='text-xl !font-extrabold text-[#103e91]'>Poco Darling</h3>
+                                                    <span className='relative'>Founder</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -101,8 +102,9 @@ const Home = () => {
                                                         <p className='txet-lg'>Call us anytime</p>
                                                     </div>
                                                     <div className='relative'>
-                                                        <p className='text-[#103e91] !font-bold text-lg'>
-                                                            <a href="tel:+233275697715">+233 27 569 7715</a>
+                                                        <p className='text-[#103e91] flex gap-2 !font-bold'>
+                                                            <a href="tel:+233275697715">0275697715</a> / 
+                                                            <a href="tel:+0558707856">0558707856</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -143,16 +145,22 @@ const Home = () => {
             </div>
 
             <div className='w-full h-full !mt-20 bg-[#f4f7fc] !py-16'>
-                <div className='w-full mx-auto !px-4'>
+                <div className='w-full !mx-auto !px-4'>
                     <h2 className='text-3xl !font-extrabold text-[#103e91]' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         Hear from Our Happy Clients
                     </h2>
                     
-                    <div className="flex justify-between max-xl:flex-col max-sm:flex-col w-full gap-8 !mt-10">
-                        {testimonials.map((testimonial) => (
+                    <div className="max-lg:flex grid grid-cols-3 max-lg:justify-between max-xl:flex-col max-sm:flex-col w-full gap-8 !mt-10">
+                        {littleTestimonials.map((testimonial) => (
                         <TestimonialCard key={testimonial.id} testimonial={testimonial} />
                         ))}
                     </div>
+                </div>
+
+                <div className=' !mt-10 !p-7 text-center'>
+                    <Link to={'/testimonials'}>
+                        <Button text={"View More"} />
+                    </Link>
                 </div>
             </div>
 

@@ -24,6 +24,11 @@ function App() {
 
   useEffect(() => {
     setShowPolicy(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, [location])
 
   return (

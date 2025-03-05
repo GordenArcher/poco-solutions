@@ -10,7 +10,7 @@ const TermsCondition = () => {
   
   return (
     <div className="max-w-4xl max-sm:!p-4 !p-10 !mx-auto bg-white overflow-hidden">
-      <div className="bg-blue-700 text-white !px-6 !py-4">
+      <div className="bg-[#103e91] text-white !px-6 !py-4">
         <h1 className="text-2xl max-sm:text-lg !font-bold">TERMS AND CONDITIONS</h1>
         <p className="text-lg max-sm:text-sm">Poco Solutions Academic Support Services</p>
         <p className="text-sm !mt-1">Effective Date: March 4, 2025</p>
@@ -18,13 +18,13 @@ const TermsCondition = () => {
       
       <div className="flex border-b border-gray-200">
         <button 
-          className={`!px-6 max-sm:!px-2 !py-3 font-medium ${activeTab === 'terms' ? 'text-blue-700 border-b-2 border-blue-700' : 'text-gray-600 hover:text-blue-600'}`}
+          className={`!px-6 max-sm:!px-2 !py-3 cursor-pointer !font-medium ${activeTab === 'terms' ? 'text-[#103e91] border-b-2 border-[#103e91]' : 'text-gray-600 hover:text-[#103e91]'}`}
           onClick={() => setActiveTab('terms')}
         >
           Terms & Conditions
         </button>
         <button 
-          className={`!px-6 !py-3 font-medium ${activeTab === 'cookies' ? 'text-blue-700 border-b-2 border-blue-700' : 'text-gray-600 hover:text-blue-600'}`}
+          className={`!px-6 !py-3 cursor-pointer !font-medium ${activeTab === 'cookies' ? 'text-[#103e91] border-b-2 border-[#103e91]' : 'text-gray-600 hover:text-[#103e91]'}`}
           onClick={() => setActiveTab('cookies')}
         >
           Cookie Policy
@@ -46,7 +46,7 @@ const TermsCondition = () => {
                         )}
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">1. SERVICE DESCRIPTION</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">1. SERVICE DESCRIPTION</h2>
                             <p className="!mt-2">
                             Poco Solutions provides academic support services including but not limited to assistance with thesis/long essays, 
                             project work, term papers, assignments, proofreading, and plagiarism checking. All services are intended for 
@@ -55,7 +55,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">2. CLIENT RESPONSIBILITIES</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">2. CLIENT RESPONSIBILITIES</h2>
                             <p className="!mt-2">
                             2.1 By engaging our services, clients confirm that any materials provided will be used solely for reference, 
                             learning, and research purposes.
@@ -71,7 +71,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">3. ACADEMIC INTEGRITY</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">3. ACADEMIC INTEGRITY</h2>
                             <p className="!mt-2">
                             3.1 Poco Solutions provides research and writing assistance as learning aids. Clients are responsible for 
                             understanding and adhering to their academic institution's policies regarding plagiarism and academic integrity.
@@ -83,7 +83,7 @@ const TermsCondition = () => {
                         </section>
                         
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">4. PAYMENT AND PRICING</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">4. PAYMENT AND PRICING</h2>
                             <p className="!mt-2">
                             4.1 Payment terms will be agreed upon before commencement of services. A deposit may be required for certain projects.
                             </p>
@@ -97,7 +97,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">5. DELIVERY AND REVISIONS</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">5. DELIVERY AND REVISIONS</h2>
                             <p className="!mt-2">
                             5.1 Delivery timelines will be established at the time of order and are subject to complexity and current workload.
                             </p>
@@ -110,7 +110,7 @@ const TermsCondition = () => {
                         </section>
                         
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">6. CONFIDENTIALITY</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">6. CONFIDENTIALITY</h2>
                             <p className="!mt-2">
                             6.1 Poco Solutions maintains strict confidentiality regarding all client information and project details.
                             </p>
@@ -120,7 +120,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">7. REFUND POLICY</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">7. REFUND POLICY</h2>
                             <p className="!mt-2">
                             7.1 Refund requests must be submitted within 48 hours of service delivery and will be evaluated on a case-by-case basis.
                             </p>
@@ -133,7 +133,7 @@ const TermsCondition = () => {
                         </section>
                         
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">8. LIMITATION OF LIABILITY</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">8. LIMITATION OF LIABILITY</h2>
                             <p className="!mt-2">
                             8.1 Poco Solutions' liability is limited to the amount paid for the specific service in question.
                             </p>
@@ -144,7 +144,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">9. COPYRIGHT AND INTELLECTUAL PROPERTY</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">9. COPYRIGHT AND INTELLECTUAL PROPERTY</h2>
                             <p className="!mt-2">
                             9.1 Until full payment is received, Poco Solutions retains all rights to materials produced.
                             </p>
@@ -154,7 +154,7 @@ const TermsCondition = () => {
                         </section>
                         
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">10. CONTACT INFORMATION</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">10. CONTACT INFORMATION</h2>
                             <p className="!mt-2">
                             For inquiries or support regarding these terms and conditions, please contact Poco Solutions:
                             </p>
@@ -164,7 +164,7 @@ const TermsCondition = () => {
                         </section>
                     
                         <section>
-                            <h2 className="text-xl !font-bold text-blue-800">11. AMENDMENTS</h2>
+                            <h2 className="text-xl !font-bold text-[#103e91]">11. AMENDMENTS</h2>
                             <p className="!mt-2">
                             Poco Solutions reserves the right to modify these terms and conditions at any time. Current terms will be 
                             available upon request.
@@ -187,21 +187,21 @@ const TermsCondition = () => {
           >
             <div className="space-y-6">
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">1. INTRODUCTION</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">1. INTRODUCTION</h2>
               <p className="!mt-2">
                 Poco Solutions we uses cookies and similar technologies on our website. This Cookie Policy explains how we use cookies, how they help us, and the choices you have.
               </p>
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">2. WHAT ARE COOKIES?</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">2. WHAT ARE COOKIES?</h2>
               <p className="!mt-2">
                 Cookies are small text files that are stored on your device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.
               </p>
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">3. HOW WE USE COOKIES</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">3. HOW WE USE COOKIES</h2>
               <p className="!mt-2">
                 We use cookies for the following purposes:
               </p>
@@ -214,7 +214,7 @@ const TermsCondition = () => {
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">4. TYPES OF COOKIES WE USE</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">4. TYPES OF COOKIES WE USE</h2>
               <div className="!mt-2">
                 <p className="font-medium">4.1 Session Cookies</p>
                 <p className="mt-1">These cookies are temporary and expire once you close your browser.</p>
@@ -231,7 +231,7 @@ const TermsCondition = () => {
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">5. YOUR COOKIE CHOICES</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">5. YOUR COOKIE CHOICES</h2>
               <p className="!mt-2">
                 You can control and manage cookies in various ways:
               </p>
@@ -246,14 +246,14 @@ const TermsCondition = () => {
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">6. UPDATES TO THIS POLICY</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">6. UPDATES TO THIS POLICY</h2>
               <p className="!mt-2">
                 We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.
               </p>
             </section>
             
             <section>
-              <h2 className="text-xl !font-bold text-blue-800">7. CONTACT US</h2>
+              <h2 className="text-xl !font-bold text-[#103e91]">7. CONTACT US</h2>
               <p className="!mt-2">
                 If you have any questions about our Cookie Policy, please contact us:
               </p>
@@ -268,7 +268,7 @@ const TermsCondition = () => {
         {activeTab === 'terms' && (
           <button 
             onClick={() => setIsExpanded(!isExpanded)}
-            className="!mt-6 !px-4 !py-2 cursor-pointer bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            className="!mt-6 !px-4 !py-2 cursor-pointer bg-[#103e91] text-white rounded hover:bg-[#103e91] transition-colors"
           >
             {isExpanded ? "Show Less" : "Read Full Terms"}
           </button>
@@ -286,7 +286,7 @@ const TermsCondition = () => {
             disabled={!isChecked}
             className={`!mt-4 !px-6 !py-2 cursor-pointer rounded !font-medium ${
               isChecked 
-                ? "bg-blue-600 text-white hover:bg-blue-700" 
+                ? "bg-[#103e91] text-white hover:bg-[#103e91]" 
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
             } transition-colors`}
           >

@@ -10,27 +10,28 @@ const About = () => {
     <div className="bg-white" data-aos="fade-up">
       <div className="max-w-7xl !mx-auto !py-16 !px-4 sm:!px-6 lg:!px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div className='relative'>
-            <h2 className="text-3xl !font-extrabold text-[#103e91] sm:text-4xl">Our Mission</h2>
-            <p className="!mt-3 max-w-3xl text-lg text-gray-600" data-aos="fade-up" >
-              At Poco Solutions, we're committed to empowering our clients with the tools and support they need to excel. 
-              We believe that everyone deserves access to professional assistance that helps them navigate academic and professional challenges effectively.
-            </p>
-            <div className="!mt-8 flex">
-              <div className="">
-                <Link to={'/contact'} className="flex items-center justify-center !font-medium  text-white">
-                  <Button text={"Contact Us"} />
-                  
-                </Link>
-              </div>
-              <div className="!ml-3 ">
-                <Link to={'/service'} className="flex items-center justify-center !font-medium">
-                  <Button text={"Our Services"} />
-                  
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="relative">
+  <h2 className="text-3xl !font-extrabold text-[#103e91] sm:text-4xl">Our Mission</h2>
+  <p className="!mt-3 max-w-3xl text-lg text-gray-600" data-aos="fade-up">
+    To empower researchers and scholars by providing high-quality academic support, research guidance, and innovative solutions that enhance knowledge creation and dissemination. We are committed to upholding academic integrity, fostering intellectual growth, and enabling groundbreaking discoveries.
+  </p>
+  <h2 className="text-3xl !font-extrabold text-[#103e91] sm:text-4xl !mt-8">Our Vision</h2>
+  <p className="!mt-3 max-w-3xl text-lg text-gray-600" data-aos="fade-up">
+    To be the leading global partner in academic research assistance, driving excellence in scholarly work through ethical, reliable, and cutting-edge research support services. We envision a future where researchers of all backgrounds have access to the resources and expertise they need to advance knowledge and innovation.
+  </p>
+  <div className="!mt-8 flex">
+    <div className="">
+      <Link to={'/contact'} className="flex items-center justify-center !font-medium  text-white">
+        <Button text={"Contact Us"} />
+      </Link>
+    </div>
+    <div className="!ml-3 ">
+      <Link to={'/service'} className="flex items-center justify-center !font-medium">
+        <Button text={"Our Services"} />
+      </Link>
+    </div>
+  </div>
+</div>
           <div className="!mt-10 lg:!mt-0" data-aos="fade-left">
             <img
               src={TeamImage}

@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 
 const Contact = () => {
 
-  const center = [ 5.6263, - 0.2741  ]
+  const center = [ 5.6128, - 0.2343 ]
 
   return (
     <div className='w-full h-full relative' data-aos="fade-up">
@@ -28,12 +28,12 @@ const Contact = () => {
                 <div className='w-full shadow !p-3 relative rounded group'>
                   <div className='flex w-full items-center flex-col gap-1.5'>
                     <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
-                      <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] font-bold text-3xl items-center justify-center'>
+                      <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
                         <ion-icon name="location-outline"></ion-icon>
                       </div>
                     </div>
                     <span data-aos="fade-up" className='text-xl !font-bold'>Address</span>
-                    <p>+233 27 569 7715</p>
+                    <p>Ayikai Doblo - Accra</p>
                   </div>
                 </div>
               </div>
@@ -43,24 +43,24 @@ const Contact = () => {
                   <div data-aos="fade-up" className='w-full shadow !p-3 relative rounded group'>
                     <div className='flex w-full items-center flex-col gap-1.5'>
                       <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
-                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] font-bold text-3xl items-center justify-center'>
+                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
                           <ion-icon name="call-outline"></ion-icon>
                         </div>
                       </div>
                       <span data-aos="fade-up" className='text-xl !font-bold'>Call Us</span>
-                      <p>+233 27 569 7715</p>
+                      <p>0275697715 / 0558707856</p>
                     </div>
                   </div>
 
                   <div data-aos="fade-up" className='w-full shadow !p-3 relative rounded group'>
                     <div className='flex w-full items-center flex-col gap-1.5'>
                       <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
-                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] font-bold text-3xl items-center justify-center'>
+                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
                           <ion-icon name="mail-outline"></ion-icon>
                         </div>
                       </div>
                       <span data-aos="fade-up" className='text-xl !font-bold'>Email Us</span>
-                      <p>info@gmail.com</p>
+                      <p> pocosolution@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,6 @@ const Contact = () => {
 
                 <div data-aos="fade-up" className='w-full !p-4 rounded-lg shadow-md bg-[#fff] h-full'>
                   <div className="w-full mx-auto">
-                    <form>
                       <div className="!mb-4">
                         <label className="block !mb-2 !font-bold text-[#103e91]" htmlFor="name"> Name </label>
                         <input
@@ -123,10 +122,15 @@ const Contact = () => {
                           id="message"
                         ></textarea>
                       </div>
-                      <div className="!mb-4 z-10">
+                      <div className="!mb-4 flex gap-2 z-10">
                         <Button text={"Send Mail"} />
+                        <div>
+                          <a href="https://wa.me/233208729505">
+                            <Button text={"Send WhatsApp Message"} />
+                          </a>
+                        </div>
+                        
                       </div>
-                    </form>
                   </div>
 
                 </div>
