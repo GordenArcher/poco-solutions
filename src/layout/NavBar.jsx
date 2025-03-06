@@ -6,7 +6,7 @@ import { AuthContext } from '../utils/context/Context';
 import Hamburger from '../components/Hamburger';
 
 const NavBar = () => {
-  const { setShowLogin } = useContext(AuthContext);
+  const { isAuthenticated } = useContext(AuthContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSide, setShowSide] = useState(false);
 
@@ -84,7 +84,7 @@ const NavBar = () => {
 
         <div className={`max-sm:fixed max-xl:fixed max-xl:w-[60%] max-xl:!p-[50px] transition-all duration-300 ${showSide ? 'translate-x-0 max-xl:translate-x-0' : 'max-sm:-translate-x-100 max-xl:-translate-x-full'} max-sm:!p-5 z-10 max-sm:w-[60%] bg-[#103e91] max-sm:h-screen max-xl:h-screen h-full max-sm:left-0 max-xl:left-0 max-xl:top-0 max-sm:top-0 relative`}>
           <div className=''>
-            <ul className='flex max-sm:flex-col max-xl:flex-col max-sm:items-start max-xl:items-start max-sm:!mt-[50px] max-sm:gap-[40px] items-center gap-3'>
+            <ul className='flex max-sm:flex-col max-xl:flex-col max-sm:items-start max-xl:items-start max-sm:!mt-[50px] max-sm:gap-[10px] items-center gap-3'>
               <li className='relative'>
                 <Link to={'/'} className='relative w-full'>
                   <div className='flex gap-2 items-center !px-4 !py-2 hover:bg-slate-500 rounded'>
@@ -114,19 +114,26 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className='relative'>
+                <Link to={'/vacancies'} className='relative w-full cursor-pointer'>
+                  <div className='flex gap-2 items-center !px-4 !py-2 hover:bg-slate-500 rounded'>
+                    <span className='text-[1.2rem] font-semibold text-[#fff] tracking-wider'>Vacancies</span>
+                  </div>
+                </Link>
+              </li>
+              <li className='relative'>
                 <Link to={'/contact'} className='relative w-full'>
                   <div className='flex gap-2 items-center !px-4 !py-2 hover:bg-slate-500 rounded'>
                     <span className='text-[1.2rem] font-semibold text-[#fff] tracking-wider'>Contact</span>
                   </div>
                 </Link>
               </li>
-              <li className='relative'>
-                <button onClick={() => setShowLogin(true)} className='relative w-full cursor-pointer'>
+              {/* <li className='relative'>
+                <Link to={'/login'} className='relative w-full cursor-pointer'>
                   <div className='flex gap-2 items-center !px-4 !py-2 hover:bg-slate-500 rounded'>
                     <span className='text-[1.2rem] font-semibold text-[#fff] tracking-wider'>Login/Register</span>
                   </div>
-                </button>
-              </li>
+                </Link>
+              </li> */}
             </ul>
           </div>
         </div>

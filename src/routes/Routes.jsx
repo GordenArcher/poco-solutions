@@ -19,6 +19,8 @@ import AppDevelopment from '../pages/AppDevelopment'
 import Publication from '../pages/Publication'
 import WebAppDevelopment from '../pages/WebAppDevelopment'
 import Testmonials from '../pages/Testmonials'
+import Register from '../pages/Auth/Register'
+import VacanciesPage from '../pages/VacanciesPage'
 
 const PageRoutes = () => {
   return (
@@ -30,7 +32,9 @@ const PageRoutes = () => {
             <Route path='/about' element={ <About />} />
             <Route path='/contact' element={ <Contact />} />
             <Route path='/login' element={ <Login />} />
+            <Route path='/join' element={ <Register />} />
             <Route path='/testimonials' element={ <Testmonials />} />
+            <Route path='/vacancies' element={ <VacanciesPage />} />
             <Route path='/privacy-policy' element={ <PrivacyPolicy />} />
             <Route path='/terms-condition' element={ <TermsCondition />} />
             <Route path='/service/thesis' element={ <Thesis />} />

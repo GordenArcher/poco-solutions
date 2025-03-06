@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/vite": "^4.0.9",
+    "@tanstack/react-query": "^5.67.1",
     "@vis.gl/react-google-maps": "^1.5.1",
     "aos": "^2.3.4",
     "framer-motion": "^12.4.7",

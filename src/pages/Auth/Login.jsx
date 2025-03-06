@@ -1,49 +1,76 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { motion } from 'framer-motion'
-import { AuthContext } from '../../utils/context/Context';
+import Loader from '../../components/Loader';
 
 const Login = () => {
 
-  const { setShowLogin } = useContext(AuthContext)
+  const [isLoading, setIsLoading] = useState(false)
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  })
+
+  const LogUserIn = async (e) => {
+    e.preventDefault()
+
+    if(!loginData.email || !loginData.password) return alert("All field are required")
+
+      setIsLoading(true)
+      try {
+          const response = await fetch("http://localhost:8000/api/v1/auth/login/", {
+        method: "POST",
+        headers:{
+          "Content-type":"application/json"
+        },
+        body: JSON.stringify({
+          email : loginData.email,
+          password : loginData.password
+        })
+      })
+
+      if(response.ok){
+        const data = await response.json()
+        console.log(data)
+      }
+
+      else{
+        const errorData = await response.json()
+        console.log(errorData)
+      }
+      } catch (error) {
+        console.log(error)
+      }finally{
+        setIsLoading(false)
+      }
+    
+  }
+
   return (
-      <div className='w-full z-9999 h-screen fixed top-0 left-0 bg-[#00000087] flex justify-center items-center'>
-        <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }} 
-        transition={{ duration: 0.3, ease: "easeOut" }} 
-        className="max-w-[500px]  bg-white p-6 rounded-lg shadow-lg"
-      >
-        <div className='absolute right-[50px] top-[70px]'>
-          <button onClick={() => setShowLogin(false)} className='text-[#fff] rounded-[50%] flex items-center justify-center border-1 w-[50px] h-[50px] cursor-pointer text-2xl !font-extrabold'>
-          <ion-icon name="close-outline"></ion-icon>
-          </button>
-        </div>
+      <div className='w-full !py-10 !mt-6 !px-10 !mb-6 flex justify-center items-center'>
 
         <div className='max-w-[500px] relative flex items-center'>
           <StyledWrapper>
             <form className="form">
               <p className="form-title">Sign in to your account</p>
               <div className="input-container">
-                <input type="email" placeholder="Enter email" />
+                <input type="email" name='email' value={loginData.email} placeholder="Enter email" onChange={(e) => setLoginData((prevData) => ({...prevData, email: e.target.value}))} />
                 <span>
                 </span>
               </div>
               <div className="input-container">
-                <input type="password" placeholder="Enter password" />
+                <input type="password" name='password' value={loginData.password} placeholder="Enter password" onChange={(e) => setLoginData((prevData) => ({...prevData, password: e.target.value}))}  />
               </div>
-              <button type="submit" className="submit">
-                Sign in
+              <button disabled onClick={LogUserIn} type="submit" className="submit">
+                {isLoading ? <Loader /> : "Sign in"}
               </button>
               <p className="signup-link">
                 No account?
-                <a href>Sign up</a>
+                <Link to={'/join'}>Join</Link>
               </p>
             </form>
           </StyledWrapper>
         </div>
-      </motion.div>
-        
       </div>
   );
 }
@@ -94,6 +121,7 @@ const StyledWrapper = styled.div`
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     background-color: #4F46E5;
+    margin: auto !important;
     color: #ffffff;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -101,6 +129,7 @@ const StyledWrapper = styled.div`
     width: 100%;
     border-radius: 0.5rem;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   .signup-link {

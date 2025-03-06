@@ -24,43 +24,62 @@ const Contact = () => {
         <div className='!mt-[50px] relative' data-aos="fade-up">
           <div className='flex flex-col gap-[35px]'>
             <div className='flex max-lg:flex-col justify-between max-sm:flex-col gap-5'>
-              <div className='shadow w-full' data-aos="fade-up">
-                <div className='w-full shadow !p-3 relative rounded group'>
-                  <div className='flex w-full items-center flex-col gap-1.5'>
-                    <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
-                      <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
-                        <ion-icon name="location-outline"></ion-icon>
+              <div className='w-full flex justify-between max-sm:flex-col gap-[20px]' data-aos="fade-up">
+                  <div className='w-full shadow !p-3 relative rounded group'>
+                    <div className='flex w-full items-center flex-col gap-2'>
+                      <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
+                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
+                          <ion-icon name="location-outline"></ion-icon>
+                        </div>
                       </div>
+                      <span data-aos="fade-up" className='text-xl !font-bold'>Address</span>
+                      <p className='text-[#103e91] !font-bold'>Ayikai Doblo - Accra</p>
                     </div>
-                    <span data-aos="fade-up" className='text-xl !font-bold'>Address</span>
-                    <p>Ayikai Doblo - Accra</p>
                   </div>
-                </div>
+
+                  <div className='flex w-full shadow !p-3 relative rounded group items-center flex-col gap-2'>
+                      <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
+                        <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
+                          <ion-icon name="logo-whatsapp"></ion-icon>
+                        </div>
+                      </div>
+
+                      <span data-aos="fade-up" className='text-xl !font-bold'>WhatsApp Us</span>
+                      <span className='text-[#103e91] !font-bold'>
+                        <a href="https://wa.me/233275697715">
+                          +233 275697715
+                        </a>
+                      </span>
+                    </div>
               </div>
+              
 
               <div className='w-full relative shadow'>
                 <div className='w-full flex justify-between max-sm:flex-col gap-[20px]'>
                   <div data-aos="fade-up" className='w-full shadow !p-3 relative rounded group'>
-                    <div className='flex w-full items-center flex-col gap-1.5'>
+                    <div className='flex w-full items-center flex-col gap-2'>
                       <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
                         <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
                           <ion-icon name="call-outline"></ion-icon>
                         </div>
                       </div>
                       <span data-aos="fade-up" className='text-xl !font-bold'>Call Us</span>
-                      <p>0275697715 / 0558707856</p>
+                      <span className='text-[#103e91] flex gap-1 !font-bold'>
+                        <a href="tel:+233275697715">0275697715</a> / 
+                        <a href="tel:+233558707856">0558707856</a>
+                      </span>
                     </div>
                   </div>
 
                   <div data-aos="fade-up" className='w-full shadow !p-3 relative rounded group'>
-                    <div className='flex w-full items-center flex-col gap-1.5'>
+                    <div className='flex w-full items-center flex-col gap-2'>
                       <div className='w-[70px] h-[70px] rounded-[50%] transition-all duration-200 border-[#103e91] group-hover:bg-[#103e91] border border-dashed'>
                         <div data-aos="fade-up" className='text-[#103e91] h-full flex transition-all duration-200 group-hover:text-[#fff] !font-bold text-3xl items-center justify-center'>
                           <ion-icon name="mail-outline"></ion-icon>
                         </div>
                       </div>
                       <span data-aos="fade-up" className='text-xl !font-bold'>Email Us</span>
-                      <p> pocosolution@gmail.com</p>
+                      <a href='mailto:pocosolution@gmail.com' className='text-[#103e91] !font-bold'> pocosolution@gmail.com</a>
                     </div>
                   </div>
                 </div>
@@ -80,7 +99,7 @@ const Contact = () => {
                   </MapContainer>
                 </div>
 
-                <div data-aos="fade-up" className='w-full !p-4 rounded-lg shadow-md bg-[#fff] h-full'>
+                {/* <div data-aos="fade-up" className='w-full !p-4 rounded-lg shadow-md bg-[#fff] h-full'>
                   <div className="w-full mx-auto">
                       <div className="!mb-4">
                         <label className="block !mb-2 !font-bold text-[#103e91]" htmlFor="name"> Name </label>
@@ -123,9 +142,12 @@ const Contact = () => {
                         ></textarea>
                       </div>
                       <div className="!mb-4 flex gap-2 z-10">
-                        <Button text={"Send Mail"} />
+                        <a href="mailto:pocosolution@gmail.com">
+                          <Button text={"Send Mail"} />
+                        </a>
+                        
                         <div>
-                          <a href="https://wa.me/233208729505">
+                          <a href="https://wa.me/233275697715">
                             <Button text={"Send WhatsApp Message"} />
                           </a>
                         </div>
@@ -133,7 +155,7 @@ const Contact = () => {
                       </div>
                   </div>
 
-                </div>
+                </div> */}
               </div>
             </div>
         </div>

@@ -5,10 +5,10 @@ export const AuthContext = createContext()
 
 const ContextProvider = ({ children }) => {
 
-    const [showLogin, setShowLogin] = useState(false)
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
 
     return (
-        <AuthContext.Provider value={{showLogin, setShowLogin}}>
+        <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated}}>
             {children}
         </AuthContext.Provider>
     )

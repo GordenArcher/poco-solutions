@@ -42,9 +42,9 @@ const PricingCard = ({ plan }) => {
                                     >
                                     <path
                                         d="M5 13l4 4L19 7"
-                                        stroke-width="2"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="round"
+                                        strokeWidth="2"
+                                        strokeLinejoin="round"
+                                        strokeLinecap="round"
                                     ></path>
                                     </svg>
                                 </div>
