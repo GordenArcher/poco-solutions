@@ -1,12 +1,8 @@
-import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import HeroImg from '../assets/images/hero.svg'
 import Button from '../components/Button'
-import { AuthContext } from '../utils/context/Context'
 
 const Hero = () => {
-
-    const { setShowLogin } = useContext(AuthContext)
-
 
   return (
     <div className='w-full h-full max-sm:!mt-5 !mt-10' data-aos="fade-up" >
@@ -25,9 +21,9 @@ const Hero = () => {
                 </div>
 
                 <div className='!mt-10' data-aos="fade-up" >
-                    <div onClick={() => setShowLogin(true)}>
+                    <Link to={'/service'} >
                         <Button text= "Get Started"/>
-                    </div>
+                    </Link>
                     
                 </div>
             </div>

@@ -383,3 +383,30 @@ export const adPackages = [
     ]
   }
 ];
+
+export const faqs = [
+  {
+      question: "How do I place an order?",
+      answer: "Simply fill out the order form on our website with the details of your research or academic project, and our team will get in touch with you."
+  },
+  {
+      question: "What is the delivery time for my order?",
+      answer: "The delivery time depends on the complexity and scope of your project. We offer fast turnarounds for urgent requests, but standard orders are delivered within 5-7 business days."
+  },
+  {
+      question: "Is my payment information secure?",
+      answer: "Yes, we use secure payment methods with encrypted transactions to ensure your payment information is always protected."
+  },
+  {
+      question: "Can I request revisions after receiving my work?",
+      answer: "Absolutely! We offer revisions within a specified time frame after you receive your work, ensuring it meets your expectations."
+  },
+  {
+      question: "Do you provide 24/7 customer support?",
+      answer: "Yes, our support team is available 24/7 to answer any questions and assist you with your project."
+  },
+  {
+      question: "What subjects or topics do you cover?",
+      answer: "We cover a wide range of academic disciplines, including but not limited to business, computer science, engineering, medical sciences, and social sciences."
+  }
+];

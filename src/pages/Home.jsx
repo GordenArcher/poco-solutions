@@ -80,7 +80,7 @@ const Home = () => {
                                         <div className='!p-1 w-full' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                                             <div className='flex gap-[10px] items-center'>
                                                 <div className='relative'>
-                                                    <img className='w-[50px] h-full rounded border-1' src={Jos} alt="josua's image" />
+                                                    <img className='w-[50px] h-full rounded border-1' src={Jos} alt="Poco's image" />
                                                 </div>
                                                 <div className='flex flex-col gap-1' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                                                     <h3 className='text-xl !font-extrabold text-[#103e91]'>Poco Darling</h3>
@@ -117,26 +117,26 @@ const Home = () => {
                     </div>
 
                     <div className='w-full'>
-                        <div className='!p-10' data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+                        <div className='!p-10' data-aos="fade-left">
                             <img className='w-full' src={AboutImg} alt="aout" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='!mt-10 relative w-full'data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div className='!mt-10 relative w-full'data-aos="fade-up">
                 <Slider />
             </div>
 
-            <div className='!mt-10 relative w-full' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div className='!mt-10 relative w-full' data-aos="fade-up">
                 <div className='w-full h-[80vh] max-sm:h-[60vh] rounded bg-[#103e91] text-white flex flex-col justify-center items-center text-center'>
-                    <h1 className='text-5xl max-sm:text-2xl !font-extrabold' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <h1 className='text-5xl max-sm:text-2xl !font-extrabold' data-aos="fade-up">
                         Unlock Your Academic Potential with Expert Support
                     </h1>
-                    <p className='text-lg max-sm:text-sm !mt-4' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <p className='text-lg max-sm:text-sm !mt-4' data-aos="fade-up">
                         High-quality research, expert guidance, and personalized solutions tailored to your needs. Let&apos;s take your academic journey to the next level!
                     </p>
-                    <div className='!mt-[70px]' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div className='!mt-[70px]' data-aos="fade-up">
                         <Link to={'/service'} className='bg-[#fff] text-[#103e91] text-lg !font-bold !py-3 !px-8 rounded-lg transition-all'>
                             Learn More
                         </Link>
@@ -164,7 +164,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='!mt-10' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div className='!mt-10' data-aos="fade-up">
                 <FaQ />
             </div>
             

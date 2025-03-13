@@ -165,7 +165,7 @@ const VacanciesPage = () => {
                   We offer tailored advertising packages to meet your specific goals and budget.
                 </p>
               </div>
-              <a href="https://+233275697715" className="!px-6 !py-3 bg-[#103e91] hover:bg-[#103e91] text-white !font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+              <a href="https://wa.me/+233275697715" className="!px-6 !py-3 bg-[#103e91] hover:bg-[#103e91] text-white !font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg">
                 Give us a message
               </a>
             </div>

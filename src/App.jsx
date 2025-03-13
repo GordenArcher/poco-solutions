@@ -18,6 +18,7 @@ function App() {
   }, []);
   
   const [showPolicy, setShowPolicy] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
   const { showLogin } = useContext(AuthContext)
@@ -31,9 +32,20 @@ function App() {
     });
   }, [location])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 100);
+      });
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-    <div className='w-full h-full z-20'>
+    <div className={`w-full h-full transition-all duration-500 z-20 ${isScrolled ? "fixed top-0 left-0 w-full z-50 shadow-lg" : '' }`}>
       <NavBar />
     </div>
 

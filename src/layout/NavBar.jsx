@@ -1,13 +1,10 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'; 
 import Logo from '../assets/images/logo.jpeg';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../utils/context/Context';
 import Hamburger from '../components/Hamburger';
 
 const NavBar = () => {
-  const { isAuthenticated } = useContext(AuthContext);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [showSide, setShowSide] = useState(false);
 
   const location = useLocation();
@@ -16,29 +13,17 @@ const NavBar = () => {
     setShowSide(false);
   }, [location]); 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 100);
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const openSide = useCallback(() => {
     setShowSide((prevState) => !prevState);
   }, []);
 
   return (
-    <div className={`w-full h-[100px] transition-all duration-300 bg-[#103e91] relative !p-3 ${
-      isScrolled ? "fixed top-0 left-0 w-full z-50 shadow-lg" : ""
-    }`}>
+    <div className={`w-full h-[100px] bg-[#103e91] relative !p-3 `}>
       <div className='w-full h-full !p-5 flex justify-between items-center'>
         <div className='relative'>
         <Link to={'/'} className="flex gap-3 items-center">
-          <img className="w-30 object-contain" src={Logo} alt="logo" />
+          <img className="w-30 max-sm:hidden object-contain" src={Logo} alt="logo" />
           <div className="text-xl sm:text-2xl md:text-3xl !font-extrabold text-white tracking-wider uppercase drop-shadow-md
                     animate-float 
                     hover:animate-bounce 
@@ -139,7 +124,7 @@ const NavBar = () => {
         </div>
 
         {/* Hamburger Menu */}
-        <div className='!ml-4 max-sm:block max-xl:block hidden'>
+        <div className='!ml-4 max-sm!p-2 max-sm:block max-xl:block hidden'>
           <Hamburger openSide={openSide} isSideOpen={showSide} />
         </div>
       </div>
