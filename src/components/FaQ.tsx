@@ -86,7 +86,7 @@ const FAQ = () => {
               variants={itemVariants}
               layout
             >
-              <button
+              <button type="button"
                 className="w-full p-6 flex justify-between items-center text-left cursor-pointer"
                 onClick={() => toggleAnswer(index)}
                 aria-expanded={activeIndex === index}
@@ -98,7 +98,7 @@ const FAQ = () => {
                   variants={iconVariants}
                   animate={activeIndex === index ? "expanded" : "collapsed"}
                   transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
+                  className="shrink-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

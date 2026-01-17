@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = ({ text }) => {
+const Button = ({ text }: { text: string}) => {
   return (
     <StyledWrapper>
       <button className="btn">{text}</button>

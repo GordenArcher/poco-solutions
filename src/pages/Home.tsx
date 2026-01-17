@@ -247,7 +247,12 @@ const Home = () => {
                   <p className="text-sm text-gray-500">Call us</p>
                   <div className="text-blue-600 font-medium">
                     <a href="tel:+233275697715">0275697715</a> /{" "}
-                    <a href="tel:+0558707856">0558707856</a>
+                    <a href="tel:+233558707856">0558707856</a>
+                  </div>
+
+                  <p className="text-sm text-gray-500">Whatsapp us</p>
+                  <div className="text-blue-600 font-medium">
+                    <a href="https://wa.me/233275697715?text=Hi GoriaAi support" target="_blank"  rel="noopener noreferrer">0275697715</a>
                   </div>
                 </div>
               </div>

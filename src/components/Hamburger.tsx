@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Hamburger = ({ openSide, isSideOpen }) => {
+const Hamburger = ({ openSide, isSideOpen }: { openSide: () => void, isSideOpen: boolean }) => {
   return (
     <StyledWrapper>
       <div>
-        <input id="checkbox2" type="checkbox" checked={isSideOpen} readOnly />
+        <input title='check' id="checkbox2" type="checkbox" checked={isSideOpen} readOnly />
         <label className="toggle toggle2" htmlFor="checkbox2" onClick={openSide}>
           <div id="bar4" className={`bars ${isSideOpen ? 'rotate45' : ''}`} />
           <div id="bar5" className={`bars ${isSideOpen ? 'scaleX0' : ''}`} />

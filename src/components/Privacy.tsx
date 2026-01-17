@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Privacy = ({ setShowPolicy }) => {
+const Privacy = ({ setShowPolicy }: { setShowPolicy: Dispatch<SetStateAction<boolean>>}) => {
   return (
     <motion.div 
       initial={{ scale: 0.8, opacity: 0 }} 
       animate={{ scale: 1, opacity: 1 }} 
       transition={{ duration: 0.5, ease: "easeOut" }} 
-      className="!p-6 fixed inset-0 z-9999 bg-[#0000006c] flex items-center justify-center"
+      className="p-6 fixed inset-0 z-9999 bg-[#0000006c] flex items-center justify-center"
     >
       <StyledWrapper>
         <div className="card">

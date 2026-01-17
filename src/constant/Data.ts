@@ -20,6 +20,10 @@ export const Choose = [
 ];
 
 export const whatDo = [
+    {
+    id: 0,
+    wdo: "Research Publications",
+  },
   {
     id: 1,
     wdo: "Thesis & Long Essay Writing",
@@ -55,10 +59,6 @@ export const whatDo = [
   {
     id: 9,
     wdo: "Website Development",
-  },
-  {
-    id: 10,
-    wdo: "publications",
   },
 ];
 export const services = [
