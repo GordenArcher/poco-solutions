@@ -1,15 +1,14 @@
 import { useLocation } from "react-router-dom";
 import PageRoutes from "./routes/Routes";
-import NavBar from "./layout/NavBar";
 import Footer from "./layout/Footer";
 import { useContext, useEffect, useState } from "react";
 import Privacy from "./components/Privacy";
 import { AuthContext } from "./utils/context/Context";
 import Login from "./pages/Auth/Login";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   const [showPolicy, setShowPolicy] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
   const { showLogin } = useContext(AuthContext);
@@ -23,17 +22,6 @@ function App() {
     });
   }, [location]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 100);
-      });
-    };
-
-    document.addEventListener("scroll", handleScroll);
-    return () => document.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
       <PageRoutes />
@@ -42,6 +30,7 @@ function App() {
         <Footer setShowPolicy={setShowPolicy} />
       </div>
 
+      <WhatsAppButton />
       {showPolicy && <Privacy setShowPolicy={setShowPolicy} />}
       {showLogin && <Login />}
     </>
